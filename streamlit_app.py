@@ -24,7 +24,7 @@ streamlit.dataframe(fruits_to_show)
 ## structuring with if else nested
 streamlit.header("Fruityvice Fruit Advice!")
 try:
-   fruit_choice = streamlit.text_input('What fruit would you like information about?','Banana')
+   fruit_choice = streamlit.text_input('What fruit would you like information about?')
    if not fruit_choice:
         streamllit.error("Please select a fruit of your choice")
    else:   
