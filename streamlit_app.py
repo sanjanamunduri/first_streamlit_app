@@ -73,9 +73,9 @@ if streamlit.button('Get the fruitload list'):
 #streamlit.stop()
 def insert_row_snowflake(new_fruit):
     with my_cnx.cursor() as my_cur:
-        sql= "INSERT INTO fruit_load_list VALUES (%s)"
+        #sql= "INSERT INTO fruit_load_list VALUES (%s)"
         val = [('jackfruit'),('papaya'),('guava'),('kiwi')]
-        my_cur.executemany(sql,val)
+        my_cur.executemany("INSERT INTO fruit_load_list VALUES (%s)",val)
         my_cnx.commit()
         return "Thanks for adding " + new_fruit
         
